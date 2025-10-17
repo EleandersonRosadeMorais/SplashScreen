@@ -21,14 +21,12 @@ public class SplashActivity extends AppCompatActivity {
         logo.startAnimation(fadeIn);
 
 
-        // Handler para esperar alguns segundos antes de abrir a tela principal
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                // Redireciona para a MainActivity
                 Intent i = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(i);
-                finish(); // fecha a Splash para não voltar
+                finish();
             }
         }, SPLASH_TIME_OUT);
     }
